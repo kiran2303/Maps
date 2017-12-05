@@ -161,38 +161,38 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     }
                 }
             });
-//            if(mLastLocation != null){
-//                double latitude = mLastLocation.getLatitude();
-//                double longitude = mLastLocation.getLongitude();
-//                Toast.makeText(this, "local", Toast.LENGTH_SHORT).show();
-//
-//                Toast.makeText(this, "current", Toast.LENGTH_SHORT).show();
-//                Log.d("myapp",String.valueOf(latitude));
-//                Log.d("myapp",String.valueOf(longitude));
-//                Geocoder geocoder = new Geocoder(this, Locale.getDefault());
-//                List<Address> address = null;
-//                try {
-//                    address = geocoder.getFromLocation(latitude,longitude,1);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                Log.d("myapp",address.toString());
-//                if(address!=null){
-//
-//                    Toast.makeText(this, ""+address.get(0).getLocality(), Toast.LENGTH_SHORT).show();
-//                    Toast.makeText(this, ""+address.get(0).getAdminArea(), Toast.LENGTH_SHORT).show();
-//                    Toast.makeText(this, ""+address.get(0).getPostalCode(), Toast.LENGTH_SHORT).show();
-//                    String cityName = address.get(0).getLocality();
-//                    String stateName = address.get(0).getAdminArea();
-//
-//                    city.setText(cityName);
-//                    state.setText(stateName);
-//
-//
-//
-//                }
-//            }
+            if(mLastLocation != null){
+                double latitude = mLastLocation.getLatitude();
+                double longitude = mLastLocation.getLongitude();
+                Toast.makeText(this, "local", Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(this, "current", Toast.LENGTH_SHORT).show();
+                Log.d("myapp",String.valueOf(latitude));
+                Log.d("myapp",String.valueOf(longitude));
+                Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+                List<Address> address = null;
+                try {
+                    address = geocoder.getFromLocation(latitude,longitude,1);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Log.d("myapp",address.toString());
+                if(address!=null){
+
+                    Toast.makeText(this, ""+address.get(0).getLocality(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, ""+address.get(0).getAdminArea(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, ""+address.get(0).getPostalCode(), Toast.LENGTH_SHORT).show();
+                    String cityName = address.get(0).getLocality();
+                    String stateName = address.get(0).getAdminArea();
+
+                    city.setText(cityName);
+                    state.setText(stateName);
+
+
+
+                }
+            }
          }
      }
     private LocationRequest getLocationRequest(){
