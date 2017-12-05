@@ -1,0 +1,42 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    tools:context="com.bhailal.sony.newmap.MapsActivity">
+
+
+    <EditText
+        android:id="@+id/plotNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="plot"
+        />
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="city"/>
+    <EditText
+        android:id="@+id/state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="state"/>
+    <EditText
+        android:id="@+id/pincode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="pin code"/>
+
+<fragment
+    android:id="@+id/map"
+    android:orientation="vertical"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    </fragment>
+</LinearLayout>
+
